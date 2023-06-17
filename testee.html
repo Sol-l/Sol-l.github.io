@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aniversário</title>
+    <style>
+        h1 {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <style>
+        @keyframes rainbow-animation {
+            0% {
+                color: red;
+            }
+
+            14% {
+                color: orange;
+            }
+
+            28% {
+                color: yellow;
+            }
+
+            42% {
+                color: green;
+            }
+
+            57% {
+                color: blue;
+            }
+
+            71% {
+                color: indigo;
+            }
+
+            85% {
+                color: violet;
+            }
+
+            100% {
+                color: red;
+            }
+        }
+
+        .rainbow-text {
+            animation: rainbow-animation 8s linear infinite;
+        }
+    </style>
+
+    <h1 id="rainbow-text">Meus Parabéns, Dudaa!! Te desejo tudo de bom e do melhor!! Certeza que tu vais conseguir
+        realizar teus sonhos!! Quando tu vier pra cidade de novo a gente sai pra comemorar kkkk</h1>
+
+    <script>
+        const letters = document.getElementById('rainbow-text').innerText.split('');
+        const rainbowColors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
+
+        function applyRainbowAnimation() {
+            const styledText = letters.map((letter, index) => {
+                const colorIndex = index % rainbowColors.length;
+                return `<span class="rainbow-text" style="animation-delay: ${index * 0.1}s">${letter}</span>`;
+            });
+            document.getElementById('rainbow-text').innerHTML = styledText.join('');
+        }
+
+        applyRainbowAnimation();
+    </script>
+
+    <img src="fotos/1.jfif" alt="" height="300px">
+    <img src="fotos/2.jfif" alt="" height="300px">
+    <img src="fotos/3.jfif" alt="" height="300px">
+    <img src="fotos/5.jpeg" alt="" height="300px">
+    <img src="fotos/6.jpeg" alt="" height="300px">
+    <img src="fotos/7.jpeg" alt="" height="300px">
+    <img src="fotos/8.jpeg" alt="" height="300px">
+    <img src="fotos/9.jpeg" alt="" height="300px">
+    <img src="fotos/10.jpeg" alt="" height="300px">
+    <img src="fotos/11.jpeg" alt="" height="300px">
+    <img src="fotos/4.jpeg" alt="" height="300px">
+
+
+</body>
+
+</html>
